@@ -20,6 +20,7 @@ html,body{
     height: 75%;
     width: 75%;
     background: red;
+    opacity: 65%;
 }
 
 .display-container{
