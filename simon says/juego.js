@@ -136,3 +136,4 @@ function resaltar($cuadro){
 function inhabilitarInput(){
     console.log(timer);
 }
+
