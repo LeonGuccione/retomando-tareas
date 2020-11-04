@@ -8,6 +8,8 @@ pantallaInicio = document.querySelector('.display-container');
 pantallaJuego = document.querySelector('.espacio');
 pantallaJuego.style.visibility = "hidden";
 
+$body = document.querySelector('body');
+
 crearBloques();
 
 function comienzaJuego(){
@@ -121,7 +123,10 @@ function resaltarCuadrosMaquina(){
         setTimeout(function(){
             resaltar(e); }, 500 * timer);
     })
-    inhabilitarInput();
+        inhabilitarInput()
+        setTimeout(function(){
+            habilitarInput(); }, (500 * (timer+1))
+    );
 }
 
 
@@ -134,5 +139,12 @@ function resaltar($cuadro){
 
 
 function inhabilitarInput(){
+    $pantalla = document.createElement('div');
+    $pantalla.className = 'pantalla';
+    $body.appendChild($pantalla);
     console.log(timer);
+}
+
+function habilitarInput(){
+    $pantalla.className = '';
 }
